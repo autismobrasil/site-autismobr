@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AutismoBR</title>
+<meta name="description" content="AutismoBR: notícias, direitos e dicas práticas para famílias de pessoas autistas e com deficiência. 2,54 milhões de seguidores no Instagram, Threads e Facebook.">
+<meta property="og:title" content="AutismoBR">
+<meta property="og:description" content="Notícias, direitos e dicas práticas para famílias de pessoas autistas e com deficiência.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0b0b0d;--soft:#16171b;--card:#1b1c21;--fg:#fff;--muted:#b4b9c3;--line:#2a2c33;--red:#ED313A;--yel:#FFCC29;--grn:#82C34B;--blue:#41B4E6;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg)}
+body{font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.faixa{display:flex;height:12px}.faixa i{flex:1}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.1}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+nav .marca{display:flex;align-items:center;gap:10px;font:800 22px "Baloo 2",system-ui,sans-serif;text-decoration:none}
+nav .marca img{width:44px;height:44px}
+nav .links{display:flex;gap:18px;font-weight:600;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}nav .links a:hover{color:var(--fg)}
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center;padding:48px 0 64px}
+.hero h1{font-size:clamp(38px,6vw,64px)}
+.hero h1 span{color:var(--yel)}
+.hero p{color:var(--muted);font-size:18px;margin:18px 0 26px;max-width:34em}
+.hero .logo{width:100%;max-width:360px;justify-self:center;filter:drop-shadow(0 20px 50px rgba(65,180,230,.22))}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.p{background:var(--yel);color:#201D1E}.btn.s{border:2px solid var(--line);color:var(--fg)}.btn.s:hover{border-color:var(--fg)}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:72px}
+.num{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.num b{display:block;font:800 clamp(28px,4vw,40px) "Baloo 2",system-ui,sans-serif}
+.num small{color:var(--muted);font-size:14px}
+.num:nth-child(1) b{color:var(--red)}.num:nth-child(2) b{color:var(--yel)}.num:nth-child(3) b{color:var(--grn)}
+section{padding:0 0 72px}
+.tag{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+section h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:10px}
+p.lead{color:var(--muted);font-size:18px;max-width:38em;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;border-top:5px solid var(--c)}
+.card h3{font-size:22px;margin-bottom:6px}.card p{color:var(--muted);font-size:15px}
+.emp{background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:40px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center}
+.emp ul{list-style:none;display:grid;gap:12px}
+.emp li{display:flex;gap:12px;color:var(--muted)}.emp li b{color:var(--fg)}
+.emp li:before{content:"";flex:0 0 12px;height:12px;border-radius:4px;margin-top:6px;background:var(--c)}
+.cont{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cont a{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none}
+.cont a:hover{border-color:var(--fg)}
+.cont small{display:block;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.cont b{font-size:18px;word-break:break-word}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:800px){
+ .hero{grid-template-columns:minmax(0,1fr);padding:24px 0 48px}.hero .logo{max-width:200px;grid-row:1}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .emp{grid-template-columns:minmax(0,1fr);padding:26px}
+ .cont{grid-template-columns:minmax(0,1fr)}
+ nav .links a.esc{display:none}
+}
+@media (max-width:600px){nav .marca{font-size:19px;gap:8px}nav .marca img{width:38px;height:38px}nav .links{gap:14px;font-size:14px}.hero .logo{max-width:170px;justify-self:start}.hero h1{font-size:34px}.hero p{font-size:16px}}
+@media (max-width:340px){nav .marca span{display:none}}
+@media (max-width:480px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:minmax(0,1fr)}.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="faixa" aria-hidden="true"><i style="background:var(--red)"></i><i style="background:var(--yel)"></i><i style="background:var(--grn)"></i><i style="background:var(--blue)"></i></div>
+<div class="wrap">
+<nav>
+ <a class="marca" href="#"><img src="logo.svg" alt=""><span>AutismoBR</span></a>
+ <div class="links"><a class="esc" href="#familias">Famílias</a><a href="#empresas">Empresas</a><a href="#contato">Contato</a></div>
+</nav>
+<header class="hero">
+ <div>
+  <h1>Informação que <span>acolhe</span> famílias autistas.</h1>
+  <p>Notícias, direitos e dicas práticas para quem convive com o autismo e com a deficiência. Tudo em linguagem simples, todos os dias, no Instagram.</p>
+  <div class="btns">
+   <a class="btn p" href="https://www.instagram.com/autismobr/" target="_blank" rel="noopener">Seguir @autismobr</a>
+   <a class="btn s" href="#empresas">Quero anunciar</a>
+  </div>
+ </div>
+ <img class="logo" src="logo.svg" alt="Logo do AutismoBR">
+</header>
+<div class="nums">
+ <div class="num"><b>2,16 mi</b><small>seguidores no Instagram</small></div>
+ <div class="num"><b>326 mil</b><small>seguidores no Threads</small></div>
+ <div class="num"><b>62,8 mil</b><small>seguidores no Facebook</small></div>
+ <div class="num"><b>23,1 mi</b><small>visualizações em 28 dias</small></div>
+ <div class="num"><b>15</b><small>posts por dia</small></div>
+</div>
+</div>
+
+<section id="familias"><div class="wrap">
+ <span class="tag" style="background:rgba(130,195,75,.15);color:var(--grn)">Para as famílias</span>
+ <h2>O que você encontra no AutismoBR</h2>
+ <p class="lead">Conteúdo feito para ajudar no dia a dia, sem complicar. Você lê, salva e manda para quem precisa.</p>
+ <div class="cards">
+  <div class="card" style="--c:var(--red)"><h3>Notícias</h3><p>O que mudou nas leis, na saúde e na escola, explicado de um jeito fácil.</p></div>
+  <div class="card" style="--c:var(--yel)"><h3>Direitos</h3><p>Carteirinha, BPC, escola, plano de saúde e fila: o que é seu por lei.</p></div>
+  <div class="card" style="--c:var(--grn)"><h3>Dicas práticas</h3><p>Crise, rotina, consultas e passeios, com passos simples para usar hoje.</p></div>
+  <div class="card" style="--c:var(--blue)"><h3>A Turma do AutismoBR</h3><p>A série de humor com o Téo e a família. Um episódio novo todo sábado.</p></div>
+ </div>
+</div></section>
+
+<section id="empresas"><div class="wrap">
+ <div class="emp">
+  <div>
+   <span class="tag" style="background:rgba(65,180,230,.15);color:var(--blue)">Para as empresas</span>
+   <h2>Sua marca perto de milhões de famílias</h2>
+   <p class="lead" style="margin-bottom:22px">Patrocine um horário fixo da nossa grade e apareça todos os dias para um público que confia na página.</p>
+   <div class="btns">
+    <a class="btn p" href="https://www.instagram.com/autismobr/" target="_blank" rel="noopener">Pedir o mídia kit</a>
+    <a class="btn s" href="mailto:contato@autismobr.com.br?subject=Patroc%C3%ADnio%20no%20AutismoBR">Mandar e-mail</a>
+   </div>
+  </div>
+  <ul>
+   <li style="--c:var(--red)"><span><b>15 cotas por dia,</b> uma para cada horário da grade.</span></li>
+   <li style="--c:var(--yel)"><span><b>Valores sob consulta,</b> com a sua marca na 2ª imagem do post.</span></li>
+   <li style="--c:var(--grn)"><span><b>Público fiel:</b> 64,5% mulheres, mães e cuidadoras de todo o Brasil.</span></li>
+   <li style="--c:var(--blue)"><span><b>Relatório todo mês</b> com os números reais do seu horário.</span></li>
+  </ul>
+ </div>
+</div></section>
+
+<section id="contato"><div class="wrap">
+ <h2 style="margin-bottom:20px">Fale com a gente</h2>
+ <div class="cont">
+  <a href="mailto:contato@autismobr.com.br"><small>E-mail</small><b>contato@autismobr.com.br</b></a>
+  <a href="https://www.instagram.com/autismobr/" target="_blank" rel="noopener"><small>Instagram</small><b>@autismobr</b></a>
+ </div>
+</div></section>
+
+<div style="height:56px"></div><footer><div class="wrap">AutismoBR © 2026 · Informação com carinho para famílias atípicas. · <a href="/privacidade">Privacidade</a> · <a href="/termos">Termos de uso</a></div></footer>
+<div class="faixa" aria-hidden="true"><i style="background:var(--red)"></i><i style="background:var(--yel)"></i><i style="background:var(--grn)"></i><i style="background:var(--blue)"></i></div>
+</body>
+</html>
